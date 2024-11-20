@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../styles/home.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body class="body">
+    <div class="container">
+        <span style="font-size: xx-large; font-weight: 650;" id="welcome-message">Seja Bem-vindo,!</span>
+        <span style="font-size: large; color: gray; margin-block: 10px;" id="user-email">Seu email é: </span>
+        <span style="font-size: x-large; font-weight: 600;">Animes favoritos</span>
+        <div class="cardsdiv" id="anime-cards">
+        </div>
+        <button style="border: 0; color: #426A8D; font-size: medium;" id="logout-button">Sair</button>
+    </div>
+
+    <script>
+        const storedUser = JSON.parse(localStorage.getItem('user'));
+
+        if (storedUser) {
+            document.getElementById('welcome-message').innerText = `Seja Bem-vindo, ${storedUser.nome}!`;
+            document.getElementById('user-email').innerText = `Seu email é: ${storedUser.email}`;
+
+            const animeCards = document.getElementById('anime-cards');
+            storedUser.favoritos.forEach(anime => {
+                const card = document.createElement('div');
+                card.classList.add('cards');
+
+                const img = document.createElement('img');
+                img.src = `../images/${anime.toLowerCase().replace(/\s+/g, '')}.jpg`;
+                img.alt = anime;
+
+                const span = document.createElement('span');
+                span.innerText = anime;
+
+                card.appendChild(img);
+                card.appendChild(span);
+                animeCards.appendChild(card);
+            });
+        } else {
+            alert('Usuário não encontrado. Faça login.');
+            window.location.href = "login.html";
+        }
+
+        document.getElementById('logout-button').addEventListener('click', function() {
+            localStorage.removeItem('user');
+            window.location.href = "login.html";
+        });
+    </script>
+</body>
+</html>
