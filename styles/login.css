@@ -19,7 +19,7 @@
 .container{
     background-color: white;
     width: 800px;
-    height: 500px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,16 +55,6 @@ input:focus{
     border-color: rgb(214, 214, 214);
 }
 
-.favorites{
-    width: 100%;
-    height: 125px;
-    border-radius: 10px;
-    border: 1px solid rgb(214, 214, 214);
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
-}
-
 .button{
     font-weight: 500;
     font-size: medium;
@@ -74,34 +64,5 @@ input:focus{
     height: 40px;
     border: 0;
     border-radius: 10px;
-}
-
-.checkbox-label {
-    display: inline-block;
     cursor: pointer;
-    user-select: none;
-    font-size: 20px;
-    color: #333;
-    transition: color 0.2s ease;
-    margin-block: 1px;
-  }
-
-.checkbox-label input {
-    display: none;
-}
-
-.checkbox-label span {
-    font-size: medium;
-    font-weight: 500;
-    display: inline-block;
-    padding: 5px 5px;
-    border: 0;
-    border-radius: 5px;
-    transition: all 0.2s ease;
-}
-
-.checkbox-label input:checked + span {
-    background-color: #4B79A1;
-    color: #fff;
-    border-color: #4B79A1;
 }

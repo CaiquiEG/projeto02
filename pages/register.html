@@ -45,41 +45,9 @@
             <input type="submit" value="Cadastrar" class="button">
         </form>
         <div>
-            <span>Já possui conta? </span><a href="login.html" style="color: #4B79A1; text-decoration: none;">Faça login</a>
+            <span>Já possui conta? </span><a href="login.html" style="color: #4B79A1; text-decoration: none; cursor: pointer;">Faça login</a>
         </div>
     </div>
-    <script>
-        document.querySelector('.entry').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            const nome = document.getElementById('nome').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const senha = document.getElementById('senha').value.trim();
-            const favoritos = [];
-
-            document.querySelectorAll('.favorites input[type="checkbox"]').forEach((checkbox) => {
-                if (checkbox.checked) {
-                    favoritos.push(checkbox.value);
-                }
-            });
-
-            if (!nome || !email || !senha) {
-                alert('Por favor, preencha todos os campos obrigatórios.');
-                return;
-            }
-
-            const newUser = {
-                nome,
-                email,
-                senha,
-                favoritos
-            };
-
-            localStorage.setItem('user', JSON.stringify(newUser));
-
-            alert('Cadastro realizado com sucesso!');
-            window.location.href = "login.html";
-        });
-    </script>
+    <script src="../js/register.js"></script>
 </body>
 </html>
