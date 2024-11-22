@@ -1,4 +1,5 @@
 # Sistema de Cadastro e Login com Exibição de Animes Favoritos
+#Para acessar o projeto use git clone https://github.com/CaiquiEG/projeto02.git
 
 Este é um projeto simples de um sistema de cadastro e login que permite aos usuários registrar suas informações, fazer login e visualizar uma página inicial personalizada com seus animes favoritos.
 
@@ -44,5 +45,3 @@ projeto/
 │   ├── demonslayer.jpg
 └── README.md              # Documentação do projeto
 # Projeto_AV2_IDW
-
-#Para acessar o projeto use git clone https://github.com/CaiquiEG/projeto02.git
