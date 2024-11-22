@@ -44,3 +44,5 @@ projeto/
 │   ├── demonslayer.jpg
 └── README.md              # Documentação do projeto
 # Projeto_AV2_IDW
+
+#Para acessar o projeto use git clone https://github.com/CaiquiEG/projeto02.git
